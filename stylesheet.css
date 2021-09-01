@@ -4,7 +4,7 @@
     display: flex;
     background-color: aliceblue;
     margin: 1em;
-    margin-left: 0.8em;
+    margin-left: 0.5em; 
 }
 .infotext{
     margin: 1em;
@@ -12,9 +12,20 @@
     font-size: larger;
     
 }
+body{
+    min-width: fit-content;
+}
 .h1,h1{
 color:lightslategray;
 
+}
+
+#linkbutton{
+    margin:1em;
+    width: 70vw;
+}
+.figure{
+    max-width: 45%;
 }
 .h2,h2{
  font-size: 1.5em;
@@ -22,6 +33,8 @@ color:lightslategray;
  padding: 1em;
 }
 .skills{ 
+    width:100%;
+    height: 100%; 
     background-color: rgb(233, 233, 233);
     padding: 1em; 
     margin: 1em;
@@ -30,30 +43,64 @@ color:lightslategray;
     margin-left: 0em;
 }
 .content{  
+max-width: 110vw;
+padding: 1em;
 background-color:whitesmoke;
+justify-content: center;
 }
-.social-link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    border-radius: 50%;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.social-link:hover, .social-link:focus {
-    background: #ddd;
-    text-decoration: none;
-    color: #555;
+.card{
+ width: 25%;
+ height: 80%; 
+ margin: auto;
 }
 .contact{
+    width:100%;
+    height:100%;
     background-color: rgb(233, 233, 233);
     padding: 1em; 
     margin: 1em;
-    font-size: larger;  
-    margin-right: 0em;
+    font-size: larger; 
+    text-align: center; 
+    margin-right: 0em; 
+    align-items: baseline;
+}
+@media only screen and (max-width:768px){
+        [class*="col-"]{
+            width:100%;
+        }
+        .about{
+            display: block;
+            align-items:unset;
+        }
+        .figure{
+            max-width: 80%;
+        }
+        .skills{
+            height: 15em; 
+            min-width: fit-content;
+        }
+        .contact{
+            height: 15em; 
+            min-width: fit-content;
+            padding: 1em;  
+            margin-right: 1em;
+            margin-left: 0em;
+            justify-content: center;
+        }
+        .content{  
+            padding: 1em;
+            font-size: smaller;
+        }
+        h1.display-2{
+            font-size: 4em; 
+        }
+        
+
+}
+@media only screen and (max-width:1400px){
+    .card{
+        width: fit-content;
+        height: fit-content;
+        margin-top: 1em;
+    }
 }
